@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      host: localhost      
+      database: calzonedb
+      port: 27017
+
+server:
+  context-path: /uaa
+  port: 9092

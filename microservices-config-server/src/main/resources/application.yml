@@ -2,10 +2,16 @@ server:
   port: 9090
   
 spring:  
+  application:
+    name: microservices-config-server
   profiles:
     active: native  	  	
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:config/
+          search-locations: classpath:shared/
+          
+security:
+    user:
+      password: configserver123456

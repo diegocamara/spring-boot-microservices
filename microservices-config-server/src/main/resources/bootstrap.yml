@@ -1,3 +1,0 @@
-spring:
-  application:
-    name: microservices-config-server
