@@ -22,3 +22,15 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+# Eclipse
+**/*.project
+**/*.classpath
+**/*.settings
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
