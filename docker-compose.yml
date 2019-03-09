@@ -1,0 +1,15 @@
+version: '3'
+services:
+  config-server:
+    build: microservices-config-server
+    image: config-server-image
+    container_name: config-server-container
+  registry-server:
+    build: microservices-eureka-server
+    image: registry-server-image
+    container_name: registry-server-container
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://config-server:9090/actuator/health"]
+      interval: 10s
+      retries: 5
